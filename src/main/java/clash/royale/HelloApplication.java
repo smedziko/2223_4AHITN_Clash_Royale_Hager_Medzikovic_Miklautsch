@@ -1,4 +1,4 @@
-package htl.steyr.ac.at.clashroyale;
+package clash.royale;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

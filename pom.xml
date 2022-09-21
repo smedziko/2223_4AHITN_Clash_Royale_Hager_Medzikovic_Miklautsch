@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>htl.steyr.ac.at.clashroyale/htl.steyr.ac.at.clashroyale.HelloApplication
+                            <mainClass>htl.steyr.ac.at.clashroyale/clash.royale.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

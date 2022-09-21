@@ -1,4 +1,4 @@
-package htl.steyr.ac.at.clashroyale.controller;
+package clash.royale.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
