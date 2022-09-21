@@ -26,7 +26,7 @@ public class MenueController {
 
     public void initialize() {
 
-        start_game.setOnAction(new EventHandler<ActionEvent>() {
+        credits_button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
 
