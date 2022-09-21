@@ -1,6 +1,8 @@
 package clash.royale.controller;
 
+import clash.royale.model.ChangeScene;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
@@ -32,6 +34,9 @@ public class ControllerCredits {
     @FXML
     private ImageView MiklautschImageview;
 
+    @FXML
+    private Button back_btn;
+
 
     /**
      * @author: smedziko
@@ -61,6 +66,19 @@ public class ControllerCredits {
     void openLink4(ActionEvent event) throws URISyntaxException, IOException{
         System.out.println("Link clicked!");
         Desktop.getDesktop().browse(new URI("http://www.instagram.com/htlsteyr/"));
+    }
+
+    public void initialize(){
+        back_btn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    ChangeScene.change_scene("menue", back_btn);
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
 

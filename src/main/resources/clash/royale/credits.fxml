@@ -62,5 +62,6 @@
             <Image url="@credits_images/HTLSteyrInstagram.jpeg" />
          </image>
       </ImageView>
+      <Button fx:id="back_btn" layoutX="854.0" layoutY="654.0" mnemonicParsing="false" onAction="#back_btn_action" prefHeight="26.0" prefWidth="55.0" text="Back" />
     </children>
 </AnchorPane>
