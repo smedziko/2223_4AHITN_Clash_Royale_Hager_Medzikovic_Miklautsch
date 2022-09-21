@@ -2,3 +2,8 @@
     -fx-background-image: url("output-onlinepngtools.jpg");
     -fx-background-size: 1000.0 800.0;
 }
+.menue{
+    -fx-background-image: url("img.png");
+    -fx-background-size: 1000.0 800.0;
+    -fx-background-repeat: no-repeat;
+    }
