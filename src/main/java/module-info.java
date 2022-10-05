@@ -3,6 +3,7 @@ module clash.royale {
     requires javafx.fxml;
     requires java.datatransfer;
     requires java.desktop;
+    requires soundPlay;
 
 
     opens clash.royale to javafx.fxml;

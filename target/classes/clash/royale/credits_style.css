@@ -3,7 +3,7 @@
     -fx-background-size: 1000.0 800.0;
 }
 .menue{
-    -fx-background-image: url("menue.png");
+    -fx-background-image: url("img.png");
     -fx-background-size: 1000.0 800.0;
     -fx-background-repeat: no-repeat;
     }

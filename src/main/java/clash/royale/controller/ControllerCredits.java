@@ -1,9 +1,12 @@
 package clash.royale.controller;
 
+import clash.royale.HelloApplication;
 import clash.royale.model.ChangeScene;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
@@ -21,9 +24,6 @@ import java.net.URISyntaxException;
  * das Instagram - Profil geöffnet.
  */
 public class ControllerCredits {
-
-    @FXML
-    private Button btn_exit;
 
     @FXML
     private ImageView HagerImageview;

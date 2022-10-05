@@ -1,6 +1,7 @@
 package clash.royale.controller;
 
 import clash.royale.model.ChangeScene;
+import clash.royale.model.startMusic;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,7 +26,8 @@ public class MenueController {
 
 
     public void initialize() {
-
+        startMusic startMusic = new startMusic();
+        startMusic.start();
         credits_button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
