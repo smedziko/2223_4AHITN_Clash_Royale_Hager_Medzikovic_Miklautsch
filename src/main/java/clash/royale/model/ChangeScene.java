@@ -21,12 +21,6 @@ public class ChangeScene {
         fxmlLoader.setLocation(u);
         Scene scene = new Scene(fxmlLoader.load());
 
-
-
-
-
-
-
         stage.setTitle(game);
         stage.setScene(scene);
         stage.show();

@@ -38,6 +38,17 @@ public class MenueController {
             }
         });
 
+        start_game.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+
+                try {
+                    ChangeScene.change_scene("hello-view", start_game);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
 
 

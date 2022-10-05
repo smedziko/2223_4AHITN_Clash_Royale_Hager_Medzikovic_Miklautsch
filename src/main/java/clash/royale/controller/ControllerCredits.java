@@ -69,11 +69,12 @@ public class ControllerCredits {
     }
 
     public void initialize(){
+
         back_btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    ChangeScene.change_scene("menue", back_btn);
+                    ChangeScene.change_scene("menu", back_btn);
                 }catch (IOException e){
                     e.printStackTrace();
                 }
