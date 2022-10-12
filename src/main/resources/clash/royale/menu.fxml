@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="600.0" styleClass="menue" stylesheets="@credits_style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clash.royale.controller.MenueController">
+<Pane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="menue" stylesheets="@credits_style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clash.royale.controller.MenueController">
    <children>
       <Button fx:id="start_game" alignment="CENTER" contentDisplay="CENTER" layoutX="378.0" layoutY="220.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="196.0" text="START GAME" textAlignment="CENTER">
          <font>
