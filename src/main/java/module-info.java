@@ -1,6 +1,9 @@
-module htl.steyr.ac.at.clashroyale {
+module clash.royale {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.datatransfer;
+    requires java.desktop;
+    requires soundPlay;
 
 
     opens clash.royale to javafx.fxml;
