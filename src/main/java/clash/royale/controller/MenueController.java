@@ -31,6 +31,9 @@ public class MenueController {
     @FXML
     private Button btn_settings;
 
+    @FXML
+    private Button deck;
+
 
     public void initialize() {
         startMusic startMusic = new startMusic();
@@ -76,6 +79,21 @@ public class MenueController {
             public void handle(ActionEvent actionEvent) {
                 try {
                     ChangeScene.change_scene("settingsmenue", btn_settings);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        /**
+         * @author elias
+         * Klick auf den Button verweist auf das Kartendeck
+         */
+        deck.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    ChangeScene.change_scene("deck", deck);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
