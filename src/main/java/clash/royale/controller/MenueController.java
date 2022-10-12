@@ -13,6 +13,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * @author elias
+ * Controller für das Menü
+ */
 public class MenueController {
 
     @FXML
@@ -31,6 +35,10 @@ public class MenueController {
     public void initialize() {
         startMusic startMusic = new startMusic();
         startMusic.start();
+        /**
+         * @author elias
+         * Klick auf den Button verweist auf die Credits-Seite
+         */
         credits_button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -43,6 +51,10 @@ public class MenueController {
             }
         });
 
+        /**
+         * @author elias
+         * Klick auf den Button verweist auf das Main-Game
+         */
         start_game.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -55,6 +67,10 @@ public class MenueController {
             }
         });
 
+        /**
+         * @author elias
+         * Klick auf den Button verweist auf die Settings
+         */
         btn_settings.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

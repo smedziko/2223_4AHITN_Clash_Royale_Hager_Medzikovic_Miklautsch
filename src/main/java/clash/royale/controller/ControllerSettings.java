@@ -12,7 +12,10 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-
+/**
+ * @author elias
+ * Controller für das Settingsmenü
+ */
 public class ControllerSettings {
         @FXML
         private Button btn_save;
@@ -29,9 +32,11 @@ public class ControllerSettings {
 
         Settings settings = new Settings();
 
-
         public void initialize() {
-
+            /**
+             * @author elias
+             * Klick auf den Button verweist auf das Menu
+             */
             btn_save.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {

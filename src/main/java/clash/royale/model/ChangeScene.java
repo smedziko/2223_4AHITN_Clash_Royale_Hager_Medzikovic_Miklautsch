@@ -9,7 +9,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * @author elias
+ * Scene wird gewechselt
+ */
 public class ChangeScene {
+    /**
+     * @author elias
+     * wechselt in eine andere Scene
+     * String game: gibt an in welche Scene gewechselt wird
+     * Button button: zur hilfestellung, um zu wissen welches die aktuelle Scene ist und um sie zu schließen
+     */
     public static void change_scene(String game, Button button) throws IOException {
         Stage stage = new Stage();
 

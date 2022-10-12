@@ -6,7 +6,10 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-
+/**
+ * @author elias
+ * setzt das Startmenu
+ */
 public class Menu extends javafx.scene.control.Menu {
     Stage window;
     BorderPane layout;
