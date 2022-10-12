@@ -24,6 +24,9 @@ public class MenueController {
     @FXML
     private Button start_game;
 
+    @FXML
+    private Button btn_settings;
+
 
     public void initialize() {
         startMusic startMusic = new startMusic();
