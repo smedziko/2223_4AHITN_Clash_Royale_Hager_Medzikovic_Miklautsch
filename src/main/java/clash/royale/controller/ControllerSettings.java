@@ -43,26 +43,7 @@ public class ControllerSettings {
                 }
             });
 
-
-            choice_music.setValue(settings.getMusicplaying());
-
-            choice_music_on.setSelected(settings.getMusiconoff());
-            choice_music_off.setSelected(!settings.getMusiconoff());
-
         }
-
-        @FXML
-        void choice_music_press_off(ActionEvent event) {
-            choice_music_on.setSelected(false);
-        }
-
-
-        @FXML
-        void choice_music_press_on(ActionEvent event) {
-            choice_music_off.setSelected(false);
-        }
-
-
     }
 
 

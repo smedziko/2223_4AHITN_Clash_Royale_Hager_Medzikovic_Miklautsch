@@ -55,6 +55,17 @@ public class MenueController {
             }
         });
 
+        btn_settings.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    ChangeScene.change_scene("settingsmenue", btn_settings);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
 
 
     }
