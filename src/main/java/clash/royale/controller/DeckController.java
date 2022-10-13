@@ -6,10 +6,19 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class DeckController {
@@ -19,10 +28,56 @@ public class DeckController {
     @FXML
     private Button back_button;
 
+    @FXML
+    private ListView listView;
+
+    @FXML
+    private HBox hbox1;
+
+    @FXML
+    private HBox hbox2;
+
+    @FXML
+    private HBox hbox3;
+
+    @FXML
+    private HBox hbox4;
+
+    @FXML
+    private HBox hbox5;
+
+    @FXML
+    private HBox hbox6;
+
+    Pane pane = new Pane();
+    Circle bg;
+
+
+
+    public void CharacterDragged(){
+        pane.setOnDragDetected(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Dragboard db = bg.startDragAndDrop(TransferMode.ANY);
+            }
+        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * @author elias
-     * Klick auf den Button verweist auf das Main-Game
+     * Klick auf den Button verweist auf das Start-Menu
      */
     public void initialize() {
         back_button.setOnAction(new EventHandler<ActionEvent>() {
@@ -37,4 +92,9 @@ public class DeckController {
             }
         });
     }
+
+
+
+
+
 }
