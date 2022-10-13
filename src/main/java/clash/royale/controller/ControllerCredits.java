@@ -1,14 +1,10 @@
 package clash.royale.controller;
 
-import clash.royale.HelloApplication;
 import clash.royale.model.ChangeScene;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
 
 import java.awt.*;
 import java.io.IOException;
@@ -26,15 +22,6 @@ import java.net.URISyntaxException;
 public class ControllerCredits {
 
     @FXML
-    private ImageView HagerImageview;
-
-    @FXML
-    private ImageView MedzikovicImageview;
-
-    @FXML
-    private ImageView MiklautschImageview;
-
-    @FXML
     private Button back_btn;
 
 
@@ -44,7 +31,6 @@ public class ControllerCredits {
      * wo bei einem Klick auf einen Namen der Entwickler bzw. deren Firma die Instagram - Seiten im
      * default Browser geöffnet wird.
      */
-
     @FXML
     void openLink1(ActionEvent event) throws URISyntaxException, IOException {
         System.out.println("Link clicked!");
@@ -62,20 +48,21 @@ public class ControllerCredits {
         System.out.println("Link clicked!");
         Desktop.getDesktop().browse(new URI("http://www.instagram.com/eliassentbygod"));
     }
+
     @FXML
-    void openLink4(ActionEvent event) throws URISyntaxException, IOException{
+    void openLink4(ActionEvent event) throws URISyntaxException, IOException {
         System.out.println("Link clicked!");
         Desktop.getDesktop().browse(new URI("http://www.instagram.com/htlsteyr/"));
     }
 
-    public void initialize(){
+    public void initialize() {
 
         back_btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 try {
                     ChangeScene.change_scene("menu", back_btn);
-                }catch (IOException e){
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
             }

@@ -1,15 +1,11 @@
 package clash.royale.controller;
 
 import clash.royale.model.ChangeScene;
-import clash.royale.model.startMusic;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -33,8 +29,6 @@ public class MenueController {
 
 
     public void initialize() {
-        startMusic startMusic = new startMusic();
-        startMusic.start();
         /**
          * @author elias
          * Klick auf den Button verweist auf die Credits-Seite
