@@ -6,7 +6,10 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -93,6 +96,16 @@ public class MenueController {
                 }
             }
         });
+
+        /**
+         * @author smedziko
+         * Hintergrundmusik wird abgespielt
+         *
+         */
+        String music = "src/indila-tourner-dans-le-vide-alphagospelmusiccom_N1IdhcRU.mp3";
+        Media m = new Media(new File(music).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(m);
+        mediaPlayer.play();
 
 
 
