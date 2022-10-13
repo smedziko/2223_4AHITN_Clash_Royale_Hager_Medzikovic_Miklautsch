@@ -1,6 +1,5 @@
 package clash.royale.controller;
 import clash.royale.model.ChangeScene;
-import clash.royale.model.startMusic;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,6 +19,7 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+
 
 public class DeckController {
     @FXML
