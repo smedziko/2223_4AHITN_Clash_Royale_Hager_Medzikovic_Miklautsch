@@ -1,10 +1,13 @@
 package clash.royale.controller;
 
 import clash.royale.model.ChangeScene;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -32,6 +35,8 @@ public class MenueController {
 
     @FXML
     private Button deck;
+
+
 
 
     public void initialize() {
@@ -96,16 +101,7 @@ public class MenueController {
                 }
             }
         });
-
-        /**
-         * @author smedziko
-         * Hintergrundmusik wird abgespielt
-         *
-         */
-        String music = "src/indila-tourner-dans-le-vide-alphagospelmusiccom_N1IdhcRU.mp3";
-        Media m = new Media(new File(music).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(m);
-        mediaPlayer.play();
+        }
 
 
 
@@ -113,4 +109,3 @@ public class MenueController {
 
 
 
-}
