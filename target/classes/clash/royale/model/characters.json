@@ -1,0 +1,36 @@
+{
+  "characters": [
+
+    {
+      "name": "pekka",
+      "health": 200,
+      "speed": 0.5,
+      "attackspeed": 0.5,
+      "damage": 200
+    },
+
+    {
+      "name": "healer",
+      "health": 50,
+      "speed": 1.5,
+      "attackspeed": 1,
+      "damage": 5
+    },
+
+    {
+      "name": "hogrider",
+      "health": 100,
+      "speed": 2,
+      "attackspeed": 1,
+      "damage": 19
+    },
+
+    {
+      "name": "giant",
+      "health": 500,
+      "speed": 0.3,
+      "attackspeed": 0.3,
+      "damage": 50
+    }
+  ]
+}
