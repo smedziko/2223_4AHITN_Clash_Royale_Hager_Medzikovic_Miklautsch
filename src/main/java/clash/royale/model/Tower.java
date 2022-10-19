@@ -1,70 +1,72 @@
 package clash.royale.model;
 
+import javafx.application.Platform;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+
+import java.lang.reflect.Array;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 public class Tower {
-    int health;
-    ProgressBar healthshow = new ProgressBar();
 
-    public Tower(AnchorPane p){
-        Pane r = new Pane();
-        r.setPrefWidth(90);
-        r.setPrefHeight(90);
-        r.setLayoutY(182);
-        r.setLayoutX(54);
+    private static final int TOWER_MEASURE = 90;
+    double health = 2000;
+    boolean exit = false;
+    ImageView picture = new ImageView();
+
+    int damage = 10;
+
+    Pane whole = new Pane();
+
+    ProgressBar healthbar;
+
+    static ArrayList<Tower> enemytowers = new ArrayList<>();
+    static ArrayList<Tower> friendlytowers = new ArrayList<>();
+
+    Label healshow = new Label();
+
+    public Tower(Pane p, int y, int x, String type) {
+        whole.setPrefWidth(TOWER_MEASURE);
+        whole.setPrefHeight(TOWER_MEASURE);
+        whole.setLayoutY(y);
+        whole.setLayoutX(x);
         Image img = new Image(String.valueOf(BackgroundGrass.class.getResource("tower.png")));
-        ImageView iv = new ImageView();
-        iv.setImage(img);
-        iv.setFitWidth(90);
-        iv.setFitHeight(90);
-        r.getChildren().add(iv);
-        p.getChildren().add(r);
+        picture.setImage(img);
+        picture.setFitWidth(TOWER_MEASURE);
+        picture.setFitHeight(TOWER_MEASURE);
 
-        Pane r2 = new Pane();
-        r2.setPrefWidth(90);
-        r2.setPrefHeight(90);
-        r2.setLayoutY(182);
-        r2.setLayoutX(474);
-        Image img2 = new Image(String.valueOf(BackgroundGrass.class.getResource("tower.png")));
-        ImageView iv2 = new ImageView();
-        iv2.setImage(img2);
-        iv2.setFitWidth(90);
-        iv2.setFitHeight(90);
-        r2.getChildren().add(iv2);
-        p.getChildren().add(r2);
+        healthbar = new ProgressBar();
+        healthbar.setProgress(1);
+        healthbar.setPrefHeight(10);
+        healthbar.setPrefWidth(80);
+        healthbar.setLayoutY(90);
+        healthbar.setLayoutX(10);
 
-        Pane r3 = new Pane();
-        r3.setPrefWidth(90);
-        r3.setPrefHeight(90);
-        r3.setLayoutY(2);
-        r3.setLayoutX(474);
-        Image img3 = new Image(String.valueOf(BackgroundGrass.class.getResource("tower.png")));
-        ImageView iv3 = new ImageView();
-        iv3.setImage(img3);
-        iv3.setFitWidth(90);
-        iv3.setFitHeight(90);
-        r3.getChildren().add(iv3);
-        p.getChildren().add(r3);
+        healshow.setFont(new Font("Arial", 8));
+        healshow.setLayoutX(4);
+        healshow.setText("100%");
+        healshow.setTextFill(Color.WHITE);
 
-        Pane r4 = new Pane();
-        r4.setPrefWidth(90);
-        r4.setPrefHeight(90);
-        r4.setLayoutY(2);
-        r4.setLayoutX(54);
-        Image img4 = new Image(String.valueOf(BackgroundGrass.class.getResource("tower.png")));
-        ImageView iv4 = new ImageView();
-        iv4.setImage(img4);
-        iv4.setFitWidth(90);
-        iv4.setFitHeight(90);
-        r4.getChildren().add(iv4);
-        p.getChildren().add(r4);
+        whole.getChildren().add(picture);
+        whole.getChildren().add(healthbar);
+        whole.getChildren().add(healshow);
+        p.getChildren().add(whole);
 
-
-
+        if (Objects.equals(type, "friendly")) {
+            friendlytowers.add(this);
+        } else {
+            enemytowers.add(this);
+        }
     }
+
 }
+

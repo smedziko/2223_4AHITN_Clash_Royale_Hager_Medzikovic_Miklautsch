@@ -14,7 +14,7 @@ public class Cards {
 
         c.setAlignment(Pos.TOP_CENTER);
         c.setPrefWidth(110);
-        c.setLayoutY(24);
+        c.setLayoutY(20);
         c.setPrefHeight(280);
         c.setLayoutX(5);
         c.setSpacing(15);
@@ -23,9 +23,11 @@ public class Cards {
            //     Insets.EMPTY)));
 
 
-        Card s2 = new Card("s",2, Color.GREEN);
-        Card s3 = new Card("s",2, Color.BLUE);
-        Card s4 = new Card("s",2, Color.RED);
+        Card s1 = new Card("pekka",2, Color.GREEN);
+        Card s2 = new Card("hogrider",2, Color.GREEN);
+        Card s3 = new Card("giant",2, Color.BLUE);
+        Card s4 = new Card("healer",2, Color.RED);
+        c.getChildren().add(s1.whole);
         c.getChildren().add(s2.whole);
         c.getChildren().add(s3.whole);
         c.getChildren().add(s4.whole);
