@@ -3,7 +3,8 @@ module clash.royale {
     requires javafx.fxml;
     requires java.datatransfer;
     requires java.desktop;
-    requires javafx.media;
+    requires  javafx.media;
+    requires org.json;
 
     exports clash.royale;
     exports clash.royale.controller;

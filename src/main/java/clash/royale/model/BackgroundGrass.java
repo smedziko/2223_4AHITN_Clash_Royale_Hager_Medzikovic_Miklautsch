@@ -12,7 +12,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 
-import java.util.Stack;
+import java.io.*;
+
+import java.util.Iterator;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
 
 public class BackgroundGrass{
 
@@ -22,10 +29,22 @@ public class BackgroundGrass{
     public static Pane playable = new Pane();
     final static int Gridend = 450;
     final static int Grid_Rectangle = 30;
+
+    final JSONArray characterData;
     int grid_change = 0;
 
-    public BackgroundGrass(AnchorPane a) {
+    public BackgroundGrass(AnchorPane a) throws IOException {
         anchorPane = a;
+        System.out.println(BackgroundGrass.class);
+        InputStream is = BackgroundGrass.class.getResourceAsStream("characters.json");
+        if (is == null) {
+            throw new NullPointerException("Cannot find resource file characters.json");
+        }
+
+        JSONTokener tokener = new JSONTokener(is);
+        JSONObject object = new JSONObject(tokener);
+        characterData = (JSONArray) object.get("characters");
+
 
         playfield.setPrefWidth(560);
         playfield.setPrefHeight(330);
@@ -48,7 +67,6 @@ public class BackgroundGrass{
             h.setLayoutY(i);
             h.setPrefHeight(Grid_Rectangle);
             h.setPrefWidth(a.getPrefWidth());
-            System.out.println(a.getPrefWidth());
 
             for (int j = 0; j <= 740; j = j+Grid_Rectangle) {
                 Rectangle r = new Rectangle();
@@ -99,9 +117,15 @@ public class BackgroundGrass{
                         playable.setOnDragDropped(new EventHandler<DragEvent>() {
                             public void handle(DragEvent event) {
                                 if(event.getSceneX() < 385 && event.getSceneY() > 60 && event.getSceneY() < 380) {
-                                    ActiveCards s = new ActiveCards(0, 0, event.getDragboard().getImage(), event.getSceneX(), event.getSceneY(), playable);
-                                    ActiveCards.active.add(s);
-                                    s.move.start();
+
+                                        Iterator i = characterData.iterator();
+                                        while(i.hasNext()){
+                                            JSONObject j = (JSONObject) i.next();
+                                            if(event.getDragboard().getString().compareTo(String.valueOf(j.get("name"))) == 0){
+                                                ActiveCards s = new ActiveCards(j.getInt("health"), j.getInt("damage"), event.getDragboard().getImage(), event.getSceneX(), event.getSceneY(), playable, "friendly");
+                                                s.move.start();
+                                            }
+                                        }
                                 }
                                 event.consume();
                             }
