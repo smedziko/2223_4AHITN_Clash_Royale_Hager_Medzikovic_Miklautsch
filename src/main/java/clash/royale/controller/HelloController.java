@@ -1,9 +1,6 @@
 package clash.royale.controller;
 
-import clash.royale.model.BackgroundGrass;
-import clash.royale.model.Cards;
-import clash.royale.model.EnemyGenerator;
-import clash.royale.model.Tower;
+import clash.royale.model.*;
 import javafx.animation.KeyValue;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
@@ -20,7 +17,9 @@ public class HelloController {
 
     public void initialize() throws IOException {
 
+        background.getChildren().clear();
         BackgroundGrass b = new BackgroundGrass(background);
+
         Cards c = new Cards(background);
         EnemyGenerator eg = new EnemyGenerator(BackgroundGrass.playable);
         Tower friendly1 = new Tower(BackgroundGrass.playable, 2, 54, "friendly");

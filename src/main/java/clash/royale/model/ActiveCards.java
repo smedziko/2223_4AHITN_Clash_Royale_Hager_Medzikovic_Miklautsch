@@ -2,8 +2,10 @@ package clash.royale.model;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextFormatter;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -11,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -43,17 +46,20 @@ public class ActiveCards extends Thread {
     boolean attackingTower = false;
     Tower attackTower;
 
+
     ArrayList<ActiveCards> enemylist;
 
     ArrayList<Tower> towers;
 
     boolean attack = false;
 
-    boolean firststart = false;
+    static boolean ended = false;
 
 
 
-    ArrayList onBoardCards = new ArrayList<>();
+
+    ArrayList onBoardCards;
+    Pane playfield;
 
     AnimationTimer move = new AnimationTimer() {
         private long lastUpdate = 0;
@@ -90,24 +96,30 @@ public class ActiveCards extends Thread {
                         if (whole.getRotate() == 5 || whole.getRotate() == -5) {
                             whole.setRotate(0);
                         }
+                        if (towers.size() > 0) {
                             if (whole.getLayoutY() < 205 && !attackingTower) {
                                 attackTower = towers.get(0);
-                                if(attackTower.health > 0) {
+
+                                if (attackTower.health > 0) {
                                     attackingTower = true;
                                     fight();
-                                }else {
+                                } else {
                                     path = 240;
                                 }
                             } else if (!attackingTower) {
                                 attackTower = towers.get(1);
-                                if(attackTower.health > 0) {
+
+                                if (attackTower.health > 0) {
                                     attackingTower = true;
                                     fight();
-                                }else {
+                                } else {
                                     path = 60;
                                 }
+                            }
                         }
                     }
+
+
 
 
 
@@ -273,6 +285,7 @@ public class ActiveCards extends Thread {
         whole.getChildren().add(picture);
 
 
+        playfield = playable;
         playable.getChildren().add(whole);
         playable.toFront();
         this.health = health;
@@ -290,11 +303,61 @@ public class ActiveCards extends Thread {
         this.start();
     }
 
+    public void stopGame(){
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                Button s = new Button();
+                s.setVisible(false);
+                playfield.getChildren().add(s);
+
+
+                try {
+                    ChangeScene.change_scene("deathpage", s);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+            }
+        });
+
+        ArrayList<ActiveCards> cards;
+        cards = ActiveCards.active;
+        for (ActiveCards e: cards) {
+            if(e.whole != whole) {
+                e.move.stop();
+                e.whole.setVisible(false);
+                e.whole.setDisable(true);
+            }
+        }
+
+        cards = EnemyGenerator.enemies;
+        for (ActiveCards e:
+                cards) {
+            if(e.whole != whole) {
+                e.whole.setDisable(true);
+                e.move.stop();
+                e.whole.setVisible(false);
+            }
+        }
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+
+                move.stop();
+                playfield.getChildren().clear();
+                ended = false;
+            }
+        });
+
+    }
+
 
     public void run() {
         DecimalFormat df = new DecimalFormat("##.00");
         while (true) {
-            System.out.println("smart");
             int i = 0;
             if(attackingTower){
                 while(towers.size() > i && !exit) {
@@ -344,6 +407,26 @@ public class ActiveCards extends Thread {
                             this.started = false;
                             exit = true;
                             attackingTower = false;
+
+                            int count = 0;
+                            ArrayList<Tower> towers1;
+                            if (Objects.equals(type, "friendly")) {
+                                towers1 = Tower.enemytowers;
+                            } else {
+                                towers1 = Tower.friendlytowers;
+                            }
+                            for (Tower t2 : towers1) {
+                                if (t2.health <= 0) {
+                                    count++;
+                                }
+                            }
+
+                            if (count == 2 && !ended) {
+                                synchronized (active){
+                                    stopGame();
+                                }
+                                ended = true;
+                            }
                         }
                         if (health <= 0) {
                             whole.setVisible(false);
