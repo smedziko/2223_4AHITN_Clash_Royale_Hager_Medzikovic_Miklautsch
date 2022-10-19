@@ -16,16 +16,18 @@ public class Card {
     private static Card cards;
     Image picture;
     Label cost;
+
     Circle background;
     boolean active = false;
     StackPane whole = new StackPane();
 
-    public Card(String picture, int cost, Color p){
+    public Card(String picture, int cost, Color color){
         background = new Circle();
 
 
-        background.setFill(Color.BLUE);
-        background.setRadius(44);
+
+        background.setFill(color);
+        background.setRadius(45);
 
         DropShadow ds = new DropShadow();
         ds.setOffsetY(3.0);
@@ -37,11 +39,11 @@ public class Card {
         whole.setAlignment(Pos.CENTER);
         whole.getChildren().add(background);
 
-        Image img = new Image(String.valueOf(BackgroundGrass.class.getResource("pekka.png")));
+        Image img = new Image(String.valueOf(BackgroundGrass.class.getResource(picture + ".png")));
 
         ImageView iv = new ImageView();
-        iv.setFitHeight(50);
-        iv.setFitWidth(70);
+        iv.setFitHeight(55);
+        iv.setFitWidth(65);
 
         iv.setImage(img);
         whole.getChildren().add(iv);
@@ -53,8 +55,9 @@ public class Card {
                 Dragboard db = background.startDragAndDrop(TransferMode.ANY);
 
                 /* Put a string on a dragboard */
-                Image img = new Image(String.valueOf(BackgroundGrass.class.getResource("pekka.png")));
+                Image img = new Image(String.valueOf(BackgroundGrass.class.getResource(picture + ".png")));
                 ClipboardContent content = new ClipboardContent();
+                content.putString(picture);
                 content.putImage(img);
                 db.setContent(content);
 
