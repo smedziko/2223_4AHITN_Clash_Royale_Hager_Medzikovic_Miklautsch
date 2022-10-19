@@ -21,6 +21,8 @@ import java.io.IOException;
  */
 public class MenueController {
 
+    public static MediaPlayer mediaPlayer;
+
     @FXML
     private Pane background;
 
@@ -86,6 +88,10 @@ public class MenueController {
                 }
             }
         });
+        String music = "src/indila-tourner-dans-le-vide-alphagospelmusiccom_N1IdhcRU.mp3";
+        Media m = new Media(new File(music).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(m);
+        mediaPlayer.play();
 
         }
 
