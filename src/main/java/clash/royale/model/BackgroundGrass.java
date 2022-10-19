@@ -33,11 +33,10 @@ public class BackgroundGrass{
 
     public BackgroundGrass(AnchorPane a){
         ActiveCards.active.clear();
-        Tower.friendlytowers.clear();
-        Tower.enemytowers.clear();
         EnemyGenerator.enemies.clear();
         Tower.enemytowers.clear();
         Tower.friendlytowers.clear();
+        ActiveCards.stopped = false;
             anchorPane = a;
             stack.getChildren().clear();
             playfield.getChildren().clear();

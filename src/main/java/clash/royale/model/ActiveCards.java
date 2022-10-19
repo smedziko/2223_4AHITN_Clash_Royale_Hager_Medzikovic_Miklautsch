@@ -37,6 +37,8 @@ public class ActiveCards extends Thread {
 
     boolean started = false;
 
+    static boolean stopped = false;
+
     ActiveCards enemy;
 
     String type;
@@ -82,11 +84,11 @@ public class ActiveCards extends Thread {
                 if (!enemydetected) {
 
                     //
-                    if (Objects.equals(type, "enemy") && whole.getLayoutX() <= 150 && !attack) {
+                    if (Objects.equals(type, "enemy") && whole.getLayoutX() <= 150 && !attack && !ActiveCards.stopped) {
                         towers = Tower.friendlytowers;
                         System.out.println("enemytowers");
                         attack = true;
-                    } else if (whole.getLayoutX() >= 485 && !attack) {
+                    } else if (whole.getLayoutX() >= 485 && !attack && !ActiveCards.stopped) {
                         towers = Tower.enemytowers;
                         attack = true;
                     }
@@ -305,6 +307,7 @@ public class ActiveCards extends Thread {
 
     public void stopGame(){
 
+        stopped = true;
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
@@ -429,6 +432,7 @@ public class ActiveCards extends Thread {
                             }
                         }
                         if (health <= 0) {
+                            whole.setRotate(0);
                             whole.setVisible(false);
                             whole.setDisable(true);
                             whole.setRotate(0);

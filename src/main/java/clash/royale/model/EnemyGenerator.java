@@ -58,7 +58,7 @@ public class EnemyGenerator {
 
     public EnemyGenerator(Pane background){
         this.background = background;
-        img = new Image(String.valueOf(BackgroundGrass.class.getResource("giant" + ".png")));
+        img = new Image(String.valueOf(BackgroundGrass.class.getResource("enemy" + ".png")));
         health = 200;
         damage = 20;
         create.start();
