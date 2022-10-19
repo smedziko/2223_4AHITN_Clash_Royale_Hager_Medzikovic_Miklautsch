@@ -19,7 +19,7 @@ public class DeckField {
         r.setHeight(10);
         lv.getItems().add(r);
         lv.getItems().add(r);
-        lv.setStyle(".list-cell {-fx-background-color: transparent;} .list-view { -fx-background-color: transparent}");
+
 
         lv.setBackground(new Background(new BackgroundFill(Color.TRANSPARENT, CornerRadii.EMPTY, Insets.EMPTY)));
         background.getChildren().add(lv);
