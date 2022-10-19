@@ -37,7 +37,6 @@ public class EnemyGenerator {
         @Override
         public void handle(long l) {
             if (l - walk >= 3_940_000_000.0) {
-                System.out.println("running");
                 if (spawnupper) {
                     y = 150;
                     ActiveCards e3 = new ActiveCards(health, damage, img, 603, y, background, "enemy");

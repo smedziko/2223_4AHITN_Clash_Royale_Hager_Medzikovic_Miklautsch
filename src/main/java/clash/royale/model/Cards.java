@@ -27,6 +27,7 @@ public class Cards {
         Card s2 = new Card("hogrider",2, Color.GREEN);
         Card s3 = new Card("giant",2, Color.BLUE);
         Card s4 = new Card("healer",2, Color.RED);
+        c.getChildren().clear();
         c.getChildren().add(s1.whole);
         c.getChildren().add(s2.whole);
         c.getChildren().add(s3.whole);
