@@ -21,7 +21,7 @@
                 <Font name="System Italic" size="14.0" />
             </font>
         </Label>
-        <TextArea editable="false" layoutX="14.0" layoutY="70.0" prefHeight="100.0" prefWidth="910.0" text="„Clash Royale“ kombiniert das Echtzeitstrategie- mit einem Sammelkartenspiel.&#10;In kurzen Drei-Minuten-Runden müssen acht vorab ausgewählte Karten strategisch gegen den Gegner&#10;eingesetzt werden, um möglichst viele gegnerische Türme zu zerstören und das Spiel zu gewinnen." />
+        <TextArea editable="false" layoutX="14.0" layoutY="70.0" prefHeight="100.0" prefWidth="910.0" text="„Crash Croyal“ kombiniert das Echtzeitstrategie- mit einem Sammelkartenspiel.&#10;In kurzen Drei-Minuten-Runden müssen acht vorab ausgewählte Karten strategisch gegen den Gegner&#10;eingesetzt werden, um möglichst viele gegnerische Türme zu zerstören und das Spiel zu gewinnen." />
         <Hyperlink layoutX="416.0" layoutY="633.0" onAction="#openLink1" text="Philipp Hager">
             <font>
                 <Font size="16.0" />
