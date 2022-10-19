@@ -21,6 +21,8 @@ import java.io.IOException;
  */
 public class MenueController {
 
+    public static MediaPlayer mediaPlayer;
+
     @FXML
     private Pane background;
 

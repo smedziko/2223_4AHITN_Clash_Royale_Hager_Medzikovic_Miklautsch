@@ -15,6 +15,8 @@ import javafx.scene.media.MediaPlayer;
 import java.io.File;
 import java.io.IOException;
 
+import static clash.royale.controller.MenueController.mediaPlayer;
+
 /**
  * @author elias
  * Controller für das Settingsmenü
@@ -59,11 +61,8 @@ public class ControllerSettings {
          * Hintergrundmusik wird abgespielt
          * Lautstärke einstellbar
          */
-        String music = "src/indila-tourner-dans-le-vide-alphagospelmusiccom_N1IdhcRU.mp3";
-        Media m = new Media(new File(music).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(m);
-        mediaPlayer.play();
 
+/**
         VolumeSlider.setValue(mediaPlayer.getVolume() * 100);
         VolumeSlider.valueProperty().addListener(new InvalidationListener() {
             @Override
@@ -71,6 +70,7 @@ public class ControllerSettings {
                 mediaPlayer.setVolume(VolumeSlider.getValue() / 100);
             }
         });
+ **/
 
     }
 }
