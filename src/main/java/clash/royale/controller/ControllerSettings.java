@@ -26,10 +26,6 @@ public class ControllerSettings {
         @FXML
         private RadioButton choice_music_off;
 
-        @FXML
-        private ChoiceBox<String> choice_music;
-
-
         Settings settings = new Settings();
 
         public void initialize() {

@@ -1,11 +1,16 @@
 package clash.royale.controller;
+import clash.royale.model.BackgroundGrass;
 import clash.royale.model.ChangeScene;
+import clash.royale.model.DeckField;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
@@ -49,27 +54,6 @@ public class DeckController {
     @FXML
     private HBox hbox6;
 
-    Pane pane = new Pane();
-    Circle bg;
-
-
-
-    public void CharacterDragged(){
-        pane.setOnDragDetected(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                Dragboard db = bg.startDragAndDrop(TransferMode.ANY);
-            }
-        });
-    }
-
-
-
-
-
-
-
-
 
 
 
@@ -80,6 +64,8 @@ public class DeckController {
      * Klick auf den Button verweist auf das Start-Menu
      */
     public void initialize() {
+
+        DeckField df = new DeckField(background);
         back_button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
