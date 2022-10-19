@@ -17,7 +17,10 @@ public class DeathpageController {
     private Button restart_game;
 
     public void initialize() {
-
+        /**
+         * @author elias
+         * Klick auf den Button verweist auf das Menu
+         */
         back_to_the_menu.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -29,7 +32,10 @@ public class DeathpageController {
                 }
             }
         });
-
+        /**
+         * @author elias
+         * Klick auf den Button verweist auf das Main-Game
+         */
         restart_game.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

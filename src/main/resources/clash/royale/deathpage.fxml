@@ -11,11 +11,11 @@
          <font>
             <Font name="Autumn Regular" size="64.0" />
          </font></Label>
-        <Button fx:id="back_to_the_menu" alignment="CENTER" contentDisplay="CENTER" layoutX="378.0" layoutY="220.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="200.0" text="BACK TO THE MENU" textAlignment="CENTER">
+        <Button fx:id="back_to_the_menu" alignment="CENTER" contentDisplay="CENTER" layoutX="378.0" layoutY="424.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="200.0" text="BACK TO THE MENU" textAlignment="CENTER">
             <font>
                 <Font name="System Italic" size="18.0" />
             </font></Button>
-        <Button fx:id="restart_game" layoutX="378.0" layoutY="400.0" prefHeight="70.0" prefWidth="200.0" text="RESTART GAME" textAlignment="CENTER">
+        <Button fx:id="restart_game" layoutX="378.0" layoutY="235.0" prefHeight="70.0" prefWidth="200.0" text="RESTART GAME" textAlignment="CENTER">
             <font>
                 <Font name="System Italic" size="18.0" />
             </font>
