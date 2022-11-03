@@ -86,7 +86,6 @@ public class ActiveCards extends Thread {
                     //
                     if (Objects.equals(type, "enemy") && whole.getLayoutX() <= 150 && !attack && !ActiveCards.stopped) {
                         towers = Tower.friendlytowers;
-                        System.out.println("enemytowers");
                         attack = true;
                     } else if (whole.getLayoutX() >= 485 && !attack && !ActiveCards.stopped) {
                         towers = Tower.enemytowers;
@@ -426,9 +425,10 @@ public class ActiveCards extends Thread {
 
                             if (count == 2 && !ended) {
                                 synchronized (active){
+                                    ended = true;
                                     stopGame();
                                 }
-                                ended = true;
+
                             }
                         }
                         if (health <= 0) {
