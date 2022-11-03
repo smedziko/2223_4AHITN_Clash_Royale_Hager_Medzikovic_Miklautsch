@@ -1,5 +1,7 @@
-# My first Website
+# Crash Croyal
 
-my content!
+## Philipp Hager, Elias Miklautsch, Semir Medzikovic
 
-[Erfahre mehr](about_me.md)
+
+
+[Erfahre mehr](about_the_game.md)
