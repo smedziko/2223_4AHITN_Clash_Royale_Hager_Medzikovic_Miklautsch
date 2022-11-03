@@ -9,8 +9,7 @@ Crash Croyal kombiniert das Echtzeitstrategie - mit einem Sammelkartenspiel.
 In kurzen Drei-Minuten-Runden müssen acht vorab ausgewählte Karten strategisch gegen den Gegner eingesetzt werden, um möglichst viele gegnerische Türme zu zerstören und dann das Spiel zu gewinnen.
 
 
-![Alternate image text](https://github.com/smedziko/2223_4AHITN_Clash_Royale_Hager_Medzikovic_Miklautsch/blob/master/src/main/resources/clash/royale/muss.jpg)
-
-
+![muss](https://user-images.githubusercontent.com/98097684/199696649-e210f396-86f1-4f0d-91c8-d454f6bbbe35.jpg)
 
 [Erfahre mehr](about_the_game.md)
+
