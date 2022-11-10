@@ -2,10 +2,10 @@
 
 * Philipp Hager
 
-   David Luiz Vorbild, SEW Schwäche, Seh Schwäche, geringfügiger Gymler, Anni woa nd begeister
+   David Luiz Vorbild, SEW Schwäche, Seh Schwäche, geringfügiger Gymler, Anni woa nd begeistert
 * Elias Miklautsch
 
-   70% Wasser,30% Rauch , Leonie woa nd begeistert, Ali
+   70% Wasser,30% Rauch , Leonie woa nd begeistert, Ali, Muttersöhnchen, 
 * Semir Medzikovic
 
    Biggest Winner, "Wie breche ich die Schule ab" Gutefrage Award, Doku schreiben is a des anzige, Vanessa is anscheinend nu begeistert
