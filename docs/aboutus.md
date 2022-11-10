@@ -16,6 +16,7 @@
 * Semir Medzikovic
 
    Biggest Winner, "Wie breche ich die Schule ab" Gutefrage Award, Doku schreiben is a des anzige, Vanessa is anscheinend nu begeistert
+   
 ![images](https://user-images.githubusercontent.com/95867791/201064372-cae8d2ec-94b3-49c3-b308-9dbdd340b6ad.jpg)
 
 
