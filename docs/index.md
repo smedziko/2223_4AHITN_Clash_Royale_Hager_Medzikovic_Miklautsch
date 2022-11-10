@@ -13,3 +13,8 @@ In kurzen Drei-Minuten-Runden müssen acht vorab ausgewählte Karten strategisch
 
 [Erfahre mehr](about_the_game.md)
 
+
+{% for element in site.data.students %}
+- {{element.firstname}} {{element.lastname}}, {{element.class}}
+{% endfor %}
+
