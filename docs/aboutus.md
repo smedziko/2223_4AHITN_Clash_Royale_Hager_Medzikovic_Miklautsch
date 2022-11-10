@@ -10,6 +10,7 @@
 * Elias Miklautsch
 
    70% Wasser,30% Rauch , Leonie woa nd begeistert, Ali, Muttersöhnchen
+
 ![mgk](https://user-images.githubusercontent.com/95867791/201064355-5067fe6e-52e0-45ab-9abe-bd47690055e7.jpg)
 
 * Semir Medzikovic
