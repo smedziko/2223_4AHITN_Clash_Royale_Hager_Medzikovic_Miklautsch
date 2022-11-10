@@ -1,3 +1,4 @@
+# About the game 
 Spiel nach dem Clash Royale Prinzip.
 
 Mit 4 Karten.
