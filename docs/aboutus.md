@@ -1,3 +1,5 @@
+# About us
+
 * Philipp Hager
 * Elias Miklautsch
 * Semir Medzikovic
